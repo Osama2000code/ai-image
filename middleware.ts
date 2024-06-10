@@ -1,7 +1,13 @@
-import { clerkMiddleware } from "@clerk/nextjs/server";
+import { clerkMiddleware,createRouteMatcher } from '@clerk/nextjs/server';
 
-export default clerkMiddleware();
+// Make sure that the `/api/webhooks/(.*)` route is not protected here
+const isPublickRoute= createRouteMatcher(['/sing-in','/sing-up','/','/api/webhooks/clerk']);
+export default clerkMiddleware((auth,req)=>{
+    if (!isPublickRoute(req)) {
+        auth().protect();
+    }
+});
 
 export const config = {
-matcher: ['/((?!.*\\..*|_next).*)', '/', '/(api|trpc)(.*)'],
-};
+    matcher: ['/((?!.*\\..*|_next).*)', '/', '/(api|trpc)(.*)'],
+    };
