@@ -1,9 +1,12 @@
-import React from 'react'
+import Header from '@/components/shared/header'
 
 const AddTransformationsPage = () => {
   return (
         <div>
-        AddTransformationsPage
+        <Header 
+        title='Transformations title'
+        subtitle='Transformations sub title'
+        />
         </div>
     )
 }

@@ -23,7 +23,7 @@ let cached: MongooseConnection = (global as any).mongoose
     cached.promise = 
         cached.promise || 
         mongoose.connect(MONGODB_URL, { 
-        dbName: 'oosama', bufferCommands: false 
+        dbName: 'osamasamiranisi', bufferCommands: false 
         })
 
     cached.conn = await cached.promise;
