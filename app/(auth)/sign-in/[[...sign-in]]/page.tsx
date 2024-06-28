@@ -1,7 +1,14 @@
-import { SignIn } from '@clerk/nextjs'
+import { SignIn } from "@clerk/nextjs";
 
-const SignInPage = () => {
-  return <SignIn />
+export default function Page() {
+return(
+    <>
+<div className="h-auto bg-gradient-to-r from-cyan-500 to-blue-500">
+        <div className="flex items-center justify-center h-screen">
+            <SignIn />
+        </div>
+</div>
+
+    </>
+);
 }
-
-export default SignInPage

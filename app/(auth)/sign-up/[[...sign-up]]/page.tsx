@@ -1,7 +1,14 @@
-import { SignUp } from '@clerk/nextjs'
+import { SignUp } from "@clerk/nextjs";
 
-const SignUpPage = () => {
-  return <SignUp />
-}
+    export default function Page() {
+    return(
+    <>
+<div className="h-auto bg-gradient-to-r from-cyan-500 to-blue-500">
+        <div className="flex items-center justify-center h-screen">
+            <SignUp />
+        </div>
+</div>
 
-export default SignUpPage
+    </>
+    );
+    }
