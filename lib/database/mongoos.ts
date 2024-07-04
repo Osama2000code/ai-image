@@ -23,9 +23,9 @@ let cached: MongooseConnection = (global as any).mongoose
     cached.promise = 
         cached.promise || 
         mongoose.connect(MONGODB_URL, { 
-        dbName: 'osamasamiranisi', bufferCommands: false 
+        dbName: 'ai-image', bufferCommands: false 
         })
-
+        alert('Truw');
     cached.conn = await cached.promise;
 
     return cached.conn;
