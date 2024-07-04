@@ -5,7 +5,9 @@ import { SignUp } from "@clerk/nextjs";
     <>
 <div className="h-auto bg-gradient-to-r from-cyan-500 to-blue-500">
         <div className="flex items-center justify-center h-screen">
-            <SignUp />
+            <SignUp
+            afterSignOutUrl={'/'}
+            />
         </div>
 </div>
 
